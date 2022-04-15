@@ -1,0 +1,19 @@
+@import '_variables';
+@import 'mixins';
+
+.footer {
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 14px;
+  color: var(--c-text-sub);
+
+  a {
+    color: var(--c-text-sub);
+    @include transition(color .2s ease);
+
+    &:hover {
+      color: var(--c-text-accent);
+    }
+  }
+}

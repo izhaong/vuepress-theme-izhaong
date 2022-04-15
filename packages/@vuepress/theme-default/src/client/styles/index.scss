@@ -1,3 +1,7 @@
+// light/dark mode
+@use 'mode/light';
+@use 'mode/dark';
+
 @use 'vars';
 @use 'vars-dark';
 @use 'normalize';
@@ -8,6 +12,7 @@
 @use 'code-group';
 @use 'custom-container';
 @use 'home';
+@use 'footer';
 @use 'layout';
 @use 'navbar';
 @use 'navbar-dropdown';

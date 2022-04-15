@@ -18,3 +18,12 @@
   transition: height 0.1s ease-out;
   overflow: hidden;
 }
+
+
+@mixin transition($value) {
+  transition: $value;
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  -ms-transition: $value;
+}
