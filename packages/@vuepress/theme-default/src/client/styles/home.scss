@@ -1,8 +1,6 @@
 @import '_variables';
 
 .home {
-  padding: var(--navbar-height) 2rem 0;
-  max-width: var(--homepage-width);
   margin: 0px auto;
   display: block;
 
@@ -99,14 +97,6 @@
     p {
       color: var(--c-text-lighter);
     }
-  }
-
-  .footer {
-    padding: 2.5rem;
-    border-top: 1px solid var(--c-border);
-    text-align: center;
-    color: var(--c-text-lighter);
-    transition: border-color var(--t-color);
   }
 }
 

@@ -1,3 +1,11 @@
+/*
+ * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
+ * @Date: 2022-04-14 15:03:56
+ * @LastEditTime: 2022-04-19 21:25:56
+ * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
+ * @Description:
+ * @FilePath: /vuepress-next/packages/@vuepress/theme-default/src/shared/page.ts
+ */
 import type { GitPluginPageData } from '@vuepress/plugin-git'
 import type { NavLink, SidebarConfig } from './nav'
 
@@ -27,6 +35,9 @@ export interface DefaultThemeHomePageFrontmatter
   features?: {
     title: string
     details: string
+  }[]
+  banners?: {
+    src: string
   }[]
   footer?: string
   footerHtml?: boolean

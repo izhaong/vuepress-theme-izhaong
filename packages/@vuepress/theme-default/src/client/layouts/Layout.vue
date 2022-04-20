@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Home from '@theme/Home.vue'
 import Navbar from '@theme/Navbar.vue'
 import Page from '@theme/Page.vue'
 import Sidebar from '@theme/Sidebar.vue'
@@ -12,6 +11,7 @@ import {
   useSidebarItems,
   useThemeLocaleData,
 } from '../composables'
+import Home from './Default.vue'
 
 const page = usePageData()
 const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()

@@ -1,7 +1,7 @@
 <!--
  * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Date: 2022-04-14 15:03:56
- * @LastEditTime: 2022-04-15 14:47:35
+ * @LastEditTime: 2022-04-15 21:10:45
  * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Description:
  * @FilePath: /vuepress-next/packages/@vuepress/theme-default/src/client/components/Page.vue
@@ -25,7 +25,6 @@ import Footer from './Footer.vue'
     <PageNav />
 
     <slot name="bottom" />
-    11
     <Footer />
   </main>
 </template>

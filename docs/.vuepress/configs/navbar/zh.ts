@@ -3,6 +3,10 @@ import { version } from '../meta'
 
 export const zh: NavbarConfig = [
   {
+    text: '大前端',
+    link: '/zh/font-end/',
+  },
+  {
     text: '指南',
     link: '/zh/guide/',
   },
