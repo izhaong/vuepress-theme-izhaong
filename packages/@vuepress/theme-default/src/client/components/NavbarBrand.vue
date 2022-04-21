@@ -1,3 +1,11 @@
+<!--
+ * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
+ * @Date: 2022-04-21 19:37:20
+ * @LastEditTime: 2022-04-21 20:39:46
+ * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
+ * @Description:
+ * @FilePath: /vuepress-next/packages/@vuepress/theme-default/src/client/components/NavbarBrand.vue
+-->
 <script setup lang="ts">
 import {
   ClientOnly,
@@ -53,3 +61,28 @@ const NavbarBrandLogo: FunctionalComponent = () => {
     </span>
   </RouterLink>
 </template>
+
+<style lang="scss" scoped>
+@import '../styles/variables';
+
+.logo {
+  height: var(--navbar-line-height);
+  margin-right: var(--navbar-padding-v);
+  vertical-align: top;
+}
+
+.site-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--c-text);
+  position: relative;
+}
+@media (max-width: $MQMobile) {
+  .site-name {
+    width: calc(100vw - 9.4rem);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+</style>

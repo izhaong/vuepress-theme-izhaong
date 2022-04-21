@@ -1,5 +1,5 @@
-@import '_mixins';
-@import '_variables';
+@import '../_variables';
+@import '../_mixins';
 
 .sidebar {
   ul {
@@ -68,6 +68,7 @@
     font-weight: 600;
     color: var(--c-text-accent);
     border-left-color: var(--c-text-accent);
+    background-color: var(--c-bg-lighter);
   }
 
   &.sidebar-heading {
@@ -116,11 +117,13 @@
       &.active {
         font-weight: 500;
         border-left-color: transparent;
+        background: transparent;
       }
     }
 
     a.sidebar-heading + .sidebar-item-children &.active {
       border-left-color: transparent;
+      background: transparent;
     }
   }
 }

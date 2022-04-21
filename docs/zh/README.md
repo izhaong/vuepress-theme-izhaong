@@ -1,5 +1,6 @@
 ---
 home: true
+layout: HomePage
 title: 首页
 heroImage: /images/hero.png
 actions:

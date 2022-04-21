@@ -1,7 +1,7 @@
 <!--
  * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Date: 2022-04-14 15:03:56
- * @LastEditTime: 2022-04-20 17:46:12
+ * @LastEditTime: 2022-04-21 22:38:50
  * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Description:
  * @FilePath: /vuepress-next/packages/@vuepress/theme-default/src/client/components/Navbar.vue
@@ -11,7 +11,7 @@ import NavbarBrand from '@theme/NavbarBrand.vue'
 import NavbarItems from '@theme/NavbarItems.vue'
 import ToggleDarkModeButton from '@theme/ToggleDarkModeButton.vue'
 import ToggleSidebarButton from '@theme/ToggleSidebarButton.vue'
-import { usePageFrontmatter, useRouteLocale } from '@vuepress/client'
+import { usePageFrontmatter } from '@vuepress/client'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useThemeLocaleData } from '../composables'
@@ -67,7 +67,7 @@ const handleInvert = () => {
   let invert = false
 
   // Home page
-  if (frontmatter.value.layout === 'Default') invert = true
+  if (frontmatter.value.layout === 'HomePage') invert = true
 
   // Post with header image
   if (frontmatter.value.layout === 'Post' && frontmatter.value.useHeaderImage)
@@ -148,7 +148,7 @@ onBeforeUnmount(() => {
       'invert': isInvert,
     }"
   >
-    <!-- <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
+    <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
 
     <span ref="navbarBrand">
       <NavbarBrand />
@@ -160,7 +160,7 @@ onBeforeUnmount(() => {
       <slot name="after" />
       <ToggleDarkModeButton v-if="enableDarkMode" />
       <NavbarSearch />
-    </div> -->
+    </div>
   </header>
 </template>
 

@@ -1,4 +1,4 @@
-@import '_variables';
+@import '../_variables';
 
 // ===============================
 // Forked and modified from prismjs/themes/prism-tomorrow.css
@@ -121,11 +121,11 @@ pre[class*='language-'] {
 
 // ===============================
 
-.theme-default-content {
+.theme-gungnir-content {
   pre,
   pre[class*='language-'] {
     line-height: 1.4;
-    padding: 1.3rem 1.5rem;
+    padding: 3rem 1.5rem 1.25rem;
     margin: 0.85rem 0;
     border-radius: 6px;
     overflow: auto;
@@ -149,7 +149,22 @@ pre[class*='language-'] {
 div[class*='language-'] {
   position: relative;
   background-color: var(--code-bg-color);
-  border-radius: 6px;
+  border-radius: 5px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 45%);
+
+  .fullscreen-code-button {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
+    z-index: 3;
+    cursor: pointer;
+  }
 
   &::before {
     position: absolute;
@@ -170,7 +185,7 @@ div[class*='language-'] {
 
   .highlight-lines {
     user-select: none;
-    padding-top: 1.3rem;
+    padding-top: 3.05rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -216,7 +231,7 @@ div[class*='language-'] {
       width: var(--code-ln-wrapper-width);
       text-align: center;
       color: var(--code-ln-color);
-      padding-top: 1.25rem;
+      padding-top: 3rem;
       line-height: 1.4;
 
       br {
@@ -231,18 +246,23 @@ div[class*='language-'] {
         line-height: 0;
       }
     }
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: var(--code-ln-wrapper-width);
-      height: 100%;
-      border-radius: 6px 0 0 6px;
-      border-right: 1px solid var(--code-hl-bg-color);
+  &.fullscreen-mode {
+    .highlight-lines {
+      padding-top: 3.95rem;
+    }
+
+    &.line-numbers-mode .line-numbers {
+      padding-top: 3.95rem;
     }
   }
+}
+
+.custom-container.details div[class*='language-'] {
+  box-shadow: none;
+  margin: 0.85rem -1.6rem;
+  border-radius: 0;
 }
 
 @each $lang in $codeLang {
@@ -255,10 +275,13 @@ div[class*='language-'] {
 
 // narrow mobile
 @media (max-width: $MQMobileNarrow) {
-  .theme-default-content {
+  div[class*='language-'] {
+    box-shadow: none;
+  }
+
+  .theme-gungnir-content {
     div[class*='language-'] {
-      margin: 0.85rem -1.5rem;
-      border-radius: 0;
+      margin: 0.85rem 0;
     }
   }
 }

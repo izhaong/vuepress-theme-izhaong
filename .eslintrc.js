@@ -1,3 +1,11 @@
+/*
+ * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
+ * @Date: 2022-04-14 15:03:56
+ * @LastEditTime: 2022-04-21 22:46:49
+ * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
+ * @Description:
+ * @FilePath: /vuepress-next/.eslintrc.js
+ */
 module.exports = {
   root: true,
   extends: 'vuepress',
@@ -21,12 +29,6 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-var-requires': 'off',
-        'vue/component-tags-order': [
-          'error',
-          {
-            order: ['script', 'template', 'style'],
-          },
-        ],
         'vue/multi-word-component-names': 'off',
       },
     },

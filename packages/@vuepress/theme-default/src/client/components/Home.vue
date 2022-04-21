@@ -1,10 +1,10 @@
 <!--
  * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
- * @Date: 2022-04-15 21:11:52
- * @LastEditTime: 2022-04-20 15:52:47
+ * @Date: 2022-04-21 19:37:20
+ * @LastEditTime: 2022-04-21 22:38:07
  * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Description:
- * @FilePath: /vuepress-next/packages/@vuepress/theme-default/src/client/layouts/Default.vue
+ * @FilePath: /vuepress-next/packages/@vuepress/theme-default/src/client/components/Home.vue
 -->
 <script setup lang="ts">
 import Footer from '@theme/Footer.vue'

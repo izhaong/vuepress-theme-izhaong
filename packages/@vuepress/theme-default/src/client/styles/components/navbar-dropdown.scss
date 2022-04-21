@@ -1,5 +1,5 @@
-@import '_mixins';
-@import '_variables';
+@import '../_variables';
+@import '../_mixins';
 
 .navbar-dropdown-wrapper {
   cursor: pointer;
@@ -62,7 +62,7 @@
         }
       }
 
-      .navbar-dropdown-subitem-wrapper {
+      .navbar-navbar-dropdown-subitem-wrapper {
         padding: 0;
         list-style: none;
 
@@ -177,7 +177,7 @@
       background-color: var(--c-bg-navbar);
       padding: 0.6rem 0;
       border: 1px solid var(--c-border);
-      border-bottom-color: var(--c-border-dark);
+      border-bottom-color: var(--c-border-sub);
       text-align: left;
       border-radius: 0.25rem;
       white-space: nowrap;

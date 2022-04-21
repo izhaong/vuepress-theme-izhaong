@@ -1,5 +1,5 @@
-@import '_mixins';
-@import '_variables';
+@import '../_variables';
+@import '../_wrapper';
 
 .page {
   padding-bottom: 2rem;
@@ -7,7 +7,7 @@
 }
 
 .page-meta {
-  @include content_wrapper;
+  @extend %wrapper;
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;
@@ -15,21 +15,31 @@
   .meta-item {
     cursor: default;
     margin-top: 0.8rem;
+    font-size: 1em;
 
     .meta-item-label {
       font-weight: 500;
-      color: var(--c-text-lighter);
+      color: var(--c-text);
     }
 
     .meta-item-info {
       font-weight: 400;
-      color: var(--c-text-quote);
+      color: var(--c-text-sub);
     }
   }
 
   .edit-link {
     display: inline-block;
     margin-right: 0.25rem;
+    color: var(--c-text-accent);
+
+    a {
+      color: var(--c-text-accent) !important;
+      margin-left: 2px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .last-updated {
@@ -39,19 +49,16 @@
 
 @media (max-width: $MQMobile) {
   .page-meta {
-    .last-updated {
-      font-size: 0.8em;
-      float: none;
-    }
+    font-size: 0.9em;
 
-    .contributors {
-      font-size: 0.8em;
+    .last-updated {
+      float: none;
     }
   }
 }
 
 .page-nav {
-  @include content_wrapper;
+  @extend %wrapper;
   padding-top: 1rem;
   padding-bottom: 0;
 
@@ -69,8 +76,10 @@
       content: '←';
     }
   }
+
   .next {
     float: right;
+
     a:after {
       content: '→';
     }
